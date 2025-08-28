@@ -32,7 +32,7 @@ To run the web application on your own machine, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/Harshityadav802/Implement-phishing-URL-detection-application.git](https://github.com/Harshityadav802/Phishing-URL-Detector.git)
+    git clone [https://github.com/Harshityadav802/Phishing-URL-detector.git](https://github.com/Harshityadav802/Phishing-URL-Detector.git)
     cd Phishing-URL-detector
     ```
 
@@ -55,10 +55,10 @@ The core of this project is the CatBoost model trained to identify phishing link
 * **Accuracy**: **99.98%**
 * **Key Features**: The model found that features like `URLTitleMatchScore`, `NoOfExternalRef`, and `SpacialCharRatioInURL` were highly predictive.
 
-For a complete breakdown of the data preprocessing, training, and evaluation, please see the [**`final.ipynb`**](https://github.com/Harshityadav802/Phishing-URL-detector/blob/main/final.ipynb) notebook in this repository.
+For a complete breakdown of the data preprocessing, training, and evaluation, please see the [**`final.ipynb`**](https://github.com/Harshityadav802/Phishing-URL-detector/main/final.ipynb) notebook in this repository.
 
 * **Accuracy**: **99.98%**
 * **Key Features**: The model found that features like `URLTitleMatchScore`, `NoOfExternalRef`, and `SpacialCharRatioInURL` were highly predictive.
 
-For a complete breakdown of the data preprocessing, training, and evaluation, please see the [**`final.ipynb`**](https://github.com/Harshityadav802/Phishing-URL-detector/blob/main/final.ipynb) notebook in this repository.
+For a complete breakdown of the data preprocessing, training, and evaluation, please see the [**`final.ipynb`**](https://github.com/Harshityadav802/Phishing-URL-detector/main/final.ipynb) notebook in this repository.
 
