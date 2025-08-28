@@ -1,4 +1,4 @@
-# Phishing URL Detector 🎣
+# Phishing URL Detector
 
 This project combines a high-accuracy machine learning model with a modern web interface to detect phishing URLs. The model, built with CatBoost, analyzes 54 different features to classify a URL as either "Legitimate" or "Phishing".
 
@@ -62,3 +62,6 @@ For a complete breakdown of the data preprocessing, training, and evaluation, pl
 
 For a complete breakdown of the data preprocessing, training, and evaluation, please see the [**`final.ipynb`**](https://github.com/Harshityadav802/Phishing-URL-detector/main/final.ipynb) notebook in this repository.
 
+
+
+**Check out my Linkedin-(https://linkedin.com/harshityadav802)
