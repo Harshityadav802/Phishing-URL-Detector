@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Phishing URL Detector 🎣
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project combines a high-accuracy machine learning model with a modern web interface to detect phishing URLs. The model, built with CatBoost, analyzes 54 different features to classify a URL as either "Legitimate" or "Phishing".
 
-## Available Scripts
+### **[Live Demo on Vercel](https://phishing-url-detector-neon.vercel.app/)** 
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This repository contains two main components:
 
-### `npm test`
+1.  **Machine Learning Model** (`final.ipynb`): A Jupyter Notebook detailing the end-to-end process of training a `CatBoostClassifier` on the PhiUSIIL Phishing URL Dataset. The model achieves **99.98% accuracy** on the test set.
+2.  **React Web Application** (the deployed site): A user-friendly interface built with React and Tailwind CSS to demonstrate the model's capabilities in a simulated environment.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##  Web App Features
 
-### `npm run build`
+* **URL Analysis**: Enter any URL to get an instant (simulated) prediction.
+* **Interactive Results**: View the result as "Phishing" or "Legitimate" with clear probability scores.
+* **Feature Breakdown**: See a breakdown of the key features that influenced the model's decision.
+* **Responsive Design**: The application is fully responsive and works on both desktop and mobile devices.
+  
+## Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* **Machine Learning**: Python, Pandas, Scikit-learn, CatBoost, Jupyter Notebook
+* **Frontend**: React, Tailwind CSS
+* **Deployment**: Vercel
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##  How to Run Locally
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run the web application on your own machine, follow these steps:
 
-### `npm run eject`
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/Harshityadav802/Implement-phishing-URL-detection-application.git](https://github.com/Harshityadav802/Implement-phishing-URL-detection-application.git)
+    cd Implement-phishing-URL-detection-application
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3.  **Start the development server:**
+    ```bash
+    npm start
+    ```
+    The application will be running at `http://localhost:3000`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Machine Learning Model Details
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The core of this project is the CatBoost model trained to identify phishing links.
 
-## Learn More
+* **Dataset**: [PhiUSIIL Phishing URL Dataset](https://www.kaggle.com/datasets/sanskaragarwal/phiusiil-phishing-url-dataset)
+* **Accuracy**: **99.98%**
+* **Key Features**: The model found that features like `URLTitleMatchScore`, `NoOfExternalRef`, and `SpacialCharRatioInURL` were highly predictive.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+For a complete breakdown of the data preprocessing, training, and evaluation, please see the [**`final.ipynb`**](https://github.com/Harshityadav802/Implement-phishing-URL-detection-application/blob/main/final.ipynb) notebook in this repository.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* **Accuracy**: **99.98%**
+* **Key Features**: The model found that features like `URLTitleMatchScore`, `NoOfExternalRef`, and `SpacialCharRatioInURL` were highly predictive.
 
-### Code Splitting
+For a complete breakdown of the data preprocessing, training, and evaluation, please see the [**`final.ipynb`**](https://github.com/Harshityadav802/Implement-phishing-URL-detection-application/blob/main/final.ipynb) notebook in this repository.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
