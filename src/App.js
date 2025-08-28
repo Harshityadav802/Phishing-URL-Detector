@@ -29,7 +29,6 @@ const App = () => {
         setIsLoading(true);
         setResult(null);
 
-        // Simulate network delay and analysis
         setTimeout(() => {
             const extractedFeatures = extractFeatures(url);
             const prediction = predict(extractedFeatures);
@@ -38,14 +37,13 @@ const App = () => {
         }, 1500);
     };
 
-    // This function simulates feature extraction.
-    // In a real application, this would involve backend processing and web scraping.
+
     const extractFeatures = (inputUrl) => {
         let cleanUrl;
         try {
             cleanUrl = new URL(inputUrl.startsWith('http') ? inputUrl : `http://${inputUrl}`);
         } catch (e) {
-            // Fallback for simple string parsing if URL constructor fails
+         
             const parts = inputUrl.replace(/^(https?:\/\/)?/, '').split('/');
             const domain = parts[0];
             const path = `/${parts.slice(1).join('/')}`;
@@ -54,7 +52,7 @@ const App = () => {
         
         const features = {};
 
-        // URL-based features (calculable)
+      
         features.URLLength = inputUrl.length;
         features.Domain = cleanUrl.hostname;
         features.DomainLength = cleanUrl.hostname.length;
@@ -72,16 +70,13 @@ const App = () => {
         features.SpacialCharRatioInURL = features.NoOfOtherSpecialCharsInURL / inputUrl.length;
         features.IsHTTPS = cleanUrl.protocol === 'https:' ? 1 : 0;
 
-        // Mocked/Simulated features (content-based)
-        features.URLTitleMatchScore = Math.random() * 0.8 + 0.1; // Phishing sites often have low scores
+        features.URLTitleMatchScore = Math.random() * 0.8 + 0.1;
         features.DomainTitleMatchScore = Math.random() * 0.8 + 0.1;
         features.NoOfExternalRef = Math.floor(Math.random() * 200);
         features.NoOfSelfRef = Math.floor(Math.random() * 100);
         features.NoOfJS = Math.floor(Math.random() * 20);
         features.TLDLegitimateProb = Math.random();
-        features.URLCharProb = Math.random() * 0.05 + 0.03; // Usually a small probability
-
-        // Log-transformed mocked features
+        features.URLCharProb = Math.random() * 0.05 + 0.03; 
         features.NoOfExternalRef_log = Math.log1p(features.NoOfExternalRef);
         features.NoOfSelfRef_log = Math.log1p(features.NoOfSelfRef);
         features.NoOfJS_log = Math.log1p(features.NoOfJS);
@@ -90,12 +85,12 @@ const App = () => {
         return features;
     };
 
-    // This function simulates the CatBoost model's prediction based on key features.
+  
     const predict = (features) => {
         let phishingScore = 0;
         let legitimateScore = 0;
 
-        // Heuristics based on your model's top features
+        
         if (features.URLTitleMatchScore < 0.5) phishingScore += 25; else legitimateScore += 25;
         if (features.NoOfExternalRef > 100) phishingScore += 20; else legitimateScore += 20;
         if (features.SpacialCharRatioInURL > 0.1) phishingScore += 15; else legitimateScore += 15;
