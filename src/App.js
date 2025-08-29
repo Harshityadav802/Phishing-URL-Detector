@@ -160,7 +160,7 @@ const App = () => {
                     </div>
                 </div>
                  <p className="text-xs text-center mt-6 text-gray-500 italic">
-                    Disclaimer: This is a demonstration. The prediction is based on a simplified model and simulated data, not live web content analysis.
+                    Disclaimer: This is a demonstration. The prediction is based on a simplified model and trained data, not live web content analysis.
                 </p>
             </div>
         );
@@ -174,7 +174,7 @@ const App = () => {
                         Phishing URL <span className="text-blue-600">Detector</span>
                     </h1>
                     <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                        Enter a URL to analyze its likelihood of being a phishing attempt. Our tool uses a simulated machine learning model based on key predictive features.
+                        Enter a URL to analyze its likelyhood of  being a phishing attempt. Our tool uses a simulated machine learning model based on key predictive features.
                     </p>
                 </header>
 
